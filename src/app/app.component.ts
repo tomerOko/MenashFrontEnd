@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myApp';
+  
+  age:number = 3;
+  hallow:string;
+
+  constructor(){
+    this.hallow="jhony boy go get that shuffle from the barn, we have a greate deal to bury";
+  }
+
+
 }
