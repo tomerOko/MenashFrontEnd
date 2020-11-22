@@ -1,0 +1,14 @@
+@import '../../../sass/mixins.scss';
+
+:host{
+  @include pageHostClass;
+}
+
+.big_blue{
+  @include big_blue_div;
+}
+
+.small_green{
+  @include small_green_div;
+  top:48.3vh;
+}

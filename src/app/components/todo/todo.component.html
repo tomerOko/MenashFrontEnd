@@ -1,0 +1,7 @@
+<div [ngClass]="containerClasses()">
+  <p>
+    <input (change)="onChange(componentState ,$event.target.checked)" type="checkbox">
+  {{componentState.title}}
+  <button (click)="onDelete(componentState)" class="del">X</button>
+</p>
+</div>

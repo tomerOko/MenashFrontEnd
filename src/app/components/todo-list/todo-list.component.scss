@@ -1,0 +1,25 @@
+:host{
+  grid-column: 1/13;
+  position: relative;
+  display: grid;
+  align-items: center; /*alignin verticaly a small item in a big frame*/
+  justify-items: stretch /*alignin horizontaly a small item in a big frame*/;
+  align-content: flex-start; /*align verticaly small frame in big grid gows with undefined row height or concrete units */
+  justify-content: space-around; /*align horizontally small frame in big grid gows with concrete column units */
+  grid-template-columns: repeat(2, 40vw);
+  gap:10px;
+  padding:10px;
+}
+
+:host>*{
+  border:2px solid blue;
+}
+
+.is-complete {
+  text-decoration: line-through;
+}
+
+.deleted{
+  opacity: 0.3;
+  order: 2;
+}

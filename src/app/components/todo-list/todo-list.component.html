@@ -1,0 +1,7 @@
+<todo
+  *ngFor="let data of todos"
+  [componentState]="data"
+  (DeleteTodo)="deleteTodo($event)"
+>
+
+</todo>

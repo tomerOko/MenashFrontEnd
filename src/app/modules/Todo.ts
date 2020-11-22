@@ -1,0 +1,21 @@
+export class Post {
+  id:number;
+  title:string;
+  completed:boolean;
+  buildingId?:string;
+  apartmentId?:string;
+  startYear?:number;
+  endYear?:number;
+  levelOfStudents?:number;
+  buildingText?:string;
+  buildingRank?:number;
+  apartamentText?:string;
+  rank?:number;
+  rentCost?:number;
+  heshbonot?:number;
+  streetName?:string;
+  buildingName?:string;
+  streetId?:string;
+  apartmentName?:string;
+  IdOfPost?:string;
+}
