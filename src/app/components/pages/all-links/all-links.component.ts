@@ -21,7 +21,9 @@ export class AllLinksComponent implements OnInit {
       {address:"/thankU", text:"thankU"},
       {address:"/welcome", text:"welcome" },
       {address:"/postSearch", text:"postSearch"},
-      {address:"/hopeWeHelped", text: "hopeWeHelped"}
+      {address:"/hopeWeHelped", text: "hopeWeHelped"},
+      {address:"/test_service", text: "test_service"}
+
     ]
    }
 

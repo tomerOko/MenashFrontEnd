@@ -9,6 +9,7 @@ import { PostSearchComponent } from './components/pages/post-search/post-search.
 import { ThankUComponent } from './components/pages/thank-u/thank-u.component';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TestServiceComponent } from './test-service/test-service.component';
 
 const routes: Routes = [
   {path:"main", component: TodoListComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"thankU", component: ThankUComponent},
   {path:"welcome", component: WelcomeComponent},
   {path:"postSearch", component: PostSearchComponent},
-  {path:"hopeWeHelped", component: HopeWeHelpedComponent}
+  {path:"hopeWeHelped", component: HopeWeHelpedComponent},
+  {path:"test_service", component: TestServiceComponent}
 ];
 
 @NgModule({

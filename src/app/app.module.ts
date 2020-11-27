@@ -24,6 +24,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { TestServiceComponent } from './test-service/test-service.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { environment } from '../environments/environment';
     HomeComponent,
     HopeWeHelpedComponent,
     InputBasicComponent,
+    TestServiceComponent,
   ],
   imports: [
     BrowserModule,
