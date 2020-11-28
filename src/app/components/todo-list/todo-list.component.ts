@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
 import { Post } from 'src/app/modules/Todo';
-import { TodoService } from 'src/app/serives/todo.service';
+import { TodoService } from '../../services/todo_service/todo.service';
 // import {Post} from "../../modules/Todo"
 @Component({
   selector: 'todo-list',

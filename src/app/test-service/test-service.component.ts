@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import cookie from '../serives/cookie';
+import { CookieService } from 'ngx-cookie-service';
+import { domain } from 'process';
+import { Street } from '../modules/street';
+import { MainService } from '../services/main_service/main.service';
 
 @Component({
   selector: 'app-test-service',
@@ -9,16 +12,32 @@ import cookie from '../serives/cookie';
 })
 export class TestServiceComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  streets:Street[];
+  resutl:String="none";
+
+  constructor(private todo_service: MainService) {}
+
 
   ngOnInit(): void {
-    let queryString = window.location.search;
-    queryString = decodeURI(queryString)
-    console.log(queryString);
-    if (queryString.indexOf("connect.sid=") > -1) {
-      console.log(queryString.split("=")[1])
-      cookie.cookie_value = queryString.split("=")[1]
-      this.router.navigate(['/router'])
-    }
+    // let queryString = decodeURI(window.location.search)
+    // console.log(queryString);
+
+    // if (queryString.indexOf("connect.sid=") > -1) {
+
+    //   let value=queryString.split("=")[1]
+    //   console.log(value)
+
+    //   console.log("============"+JSON.stringify(this.cookie.getAll()))
+      // this.router.navigate(['/router'])
+    // }
+  }
+
+  display_streets(){
+    // this.cookie.set("connect.sid","s%3AzvYBPib8g9xURKIW-MbhPNqcn8eEfp15.pi2XyqDIYjfNKmJqNQO34%2BJR351it2butIUtE7T22mE",null,"/","localhost:/3000")
+    this.todo_service.get_all_streets().subscribe(data => {
+      this.streets=data
+      console.log(this.streets)
+      this.resutl=JSON.stringify(this.streets)
+    })
   }
 }

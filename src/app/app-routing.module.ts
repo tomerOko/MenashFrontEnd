@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { AllLinksComponent } from './components/pages/all-links/all-links.component';
 import { ConnectionProblemComponent } from './components/pages/connection-problem/connection-problem.component';
+import { HomeComponent } from './components/pages/home/home.component';
 import { HopeWeHelpedComponent } from './components/pages/hope-we-helped/hope-we-helped.component';
 import { MailProblemComponent } from './components/pages/mail-problem/mail-problem.component';
 import { PostSearchComponent } from './components/pages/post-search/post-search.component';
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path:"wrongMail", component:MailProblemComponent},
   {path:"router", component: AllLinksComponent},
   {path:"thankU", component: ThankUComponent},
-  {path:"welcome", component: WelcomeComponent},
+  {path:"home", component: HomeComponent},
   {path:"postSearch", component: PostSearchComponent},
   {path:"hopeWeHelped", component: HopeWeHelpedComponent},
   {path:"test_service", component: TestServiceComponent}

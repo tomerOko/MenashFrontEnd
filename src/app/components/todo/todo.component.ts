@@ -1,6 +1,6 @@
 import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@angular/core';
 import { Post } from 'src/app/modules/Todo';
-import {TodoService} from '../../serives/todo.service'
+import {TodoService} from '../../services/todo_service/todo.service'
 
 @Component({
   selector: 'todo',

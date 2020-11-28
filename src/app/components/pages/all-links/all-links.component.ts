@@ -14,17 +14,15 @@ export class AllLinksComponent implements OnInit {
 
   ngOnInit() {
     this.routerLinks=[
-      {address:"/", text:"landing"},
+      {address:"/", text:"welcome"},
       {address:"/main", text:"shoping list"},
       {address:"/bedConnection", text:"bedConnection"},
       {address:"/wrongMail", text:"wrongMail"},
       {address:"/thankU", text:"thankU"},
-      {address:"/welcome", text:"welcome" },
+      {address:"/home", text:"home" },
       {address:"/postSearch", text:"postSearch"},
       {address:"/hopeWeHelped", text: "hopeWeHelped"},
       {address:"/test_service", text: "test_service"}
-
     ]
    }
-
 }

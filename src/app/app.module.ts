@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TestComponent } from './components/test/test.component';
-import { from } from 'rxjs';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 import { MailProblemComponent } from './components/pages/mail-problem/mail-problem.component';
 import { ConnectionProblemComponent } from './components/pages/connection-problem/connection-problem.component';
@@ -20,11 +19,9 @@ import { AllLinksComponent } from './components/pages/all-links/all-links.compon
 import { HomeComponent } from './components/pages/home/home.component';
 import { HopeWeHelpedComponent } from './components/pages/hope-we-helped/hope-we-helped.component';
 import { InputBasicComponent } from './components/elements/input-basic/input-basic.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 import { TestServiceComponent } from './test-service/test-service.component';
+import { CookieService } from 'ngx-cookie-service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -49,12 +46,11 @@ import { TestServiceComponent } from './test-service/test-service.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

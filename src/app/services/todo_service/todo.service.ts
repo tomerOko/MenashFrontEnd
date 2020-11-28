@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Post } from '../modules/Todo';
+import { Post } from '../../modules/Todo';
 import { Observable } from 'rxjs';
 
 const httpOptions={
@@ -8,6 +8,7 @@ const httpOptions={
   'content-type':'application/json'
   })
 }
+
 @Injectable({
   providedIn: 'root'
 })
