@@ -6,8 +6,18 @@
 
 .big_blue{
   @include big_blue_div;
+  top: 55.6vh;
+  font-size: 21px ;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .small_green{
   @include small_green_div;
+  top:40vh;
+  line-height: 1.2;
+}
+
+.top329{
+  top:32.9vh;
 }

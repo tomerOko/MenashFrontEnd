@@ -17,6 +17,10 @@
   position: absolute;
 }
 
+.elementHostClass{
+  @include elementHostClass()
+}
+
 /* align-items: center; alignin verticaly a small item in a big frame */
 /* justify-items: stretch alignin horizontaly a small item in a big frame; */
 /* align-content: flex-start; align verticaly small frame in big grid gows with undefined row height or concrete units */

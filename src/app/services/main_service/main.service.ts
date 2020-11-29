@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { apartment_post } from 'src/app/modules/apartment_post';
+import { building_post } from 'src/app/modules/building_post';
 import { Street } from 'src/app/modules/street';
 import { Post } from 'src/app/modules/Todo';
 
@@ -50,28 +51,28 @@ export class MainService {
     return this.http.post < any > (this.slags.domain + this.slags.create_apartment_post, {"apartmentId":apartmentId, "startYear":post_data.startYear ,  "endYear":post_data.endYear , "apartamentText":post_data.apartamentText , "rank":post_data.rank , "rentCost":post_data.rentCost , "heshbonot": post_data.heshbonot}, httpOptions)
   }
 
-  create_building_post(buildingId:string, apartmentId:string, post_data:apartment_post): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.create_building_post, "", httpOptions)
+  create_building_post(buildingId:string, apartmentId:string, post_data:building_post): Observable < any > {
+    return this.http.post < any > (this.slags.domain + this.slags.create_building_post,{"buildingId":buildingId, "apartmentId":apartmentId, "startYear":post_data.startYear ,  "endYear":post_data.endYear , "levelOfStudents":post_data.levelOfStudents , "buildingText":post_data.buildingText , "buildingRank":post_data.buildingRank}, httpOptions)
   }
 
-  get_apartments(): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.get_apartments, "", httpOptions)
+  get_apartments(buildingId:string): Observable < any > {
+    return this.http.post < any > (this.slags.domain + this.slags.get_apartments, {"buildingId":buildingId}, httpOptions)
   }
 
-  get_apartment_posts(): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.get_apartment_posts, "", httpOptions)
+  get_apartment_posts(apartmentId:string): Observable < any > {
+    return this.http.post < any > (this.slags.domain + this.slags.get_apartment_posts, {"apartmentId":apartmentId}, httpOptions)
   }
 
-  get_building_posts(): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.get_building_posts, "", httpOptions)
+  get_building_posts(buildingId:string): Observable < any > {
+    return this.http.post < any > (this.slags.domain + this.slags.get_building_posts, {"buildingId":buildingId}, httpOptions)
   }
 
   get_my_apartment_posts(): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.get_my_apartment_posts, "", httpOptions)
+    return this.http.post < any > (this.slags.domain + this.slags.get_my_apartment_posts, {}, httpOptions)
   }
 
   get_my_building_posts(): Observable < any > {
-    return this.http.post < any > (this.slags.domain + this.slags.get_my_building_posts, "", httpOptions)
+    return this.http.post < any > (this.slags.domain + this.slags.get_my_building_posts, {}, httpOptions)
   }
 
 }
