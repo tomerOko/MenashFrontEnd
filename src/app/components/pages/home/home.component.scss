@@ -10,4 +10,25 @@
 
 .small_green{
   @include small_green_div;
+  top:48.7vh;
+}
+
+.wait{
+  @include green_text;
+  position: relative;
+  top: 78.6vh;
+  font-size: 18;
+  font-weight: 700;
+}
+
+.top274{
+  top:27.4vh;
+}
+
+.top274 img{
+  height: 8.35vh;
+}
+
+.top3583{
+  top:35.83vh!important;
 }

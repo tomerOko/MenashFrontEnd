@@ -1,0 +1,35 @@
+@import '../../../sass/mixins.scss';
+
+:host{
+  @include elementHostClass;
+  position: absolute;
+  top:66.5vh;
+}
+
+img.google_login{
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+
+a.google_login{
+  width: 100%;
+  padding-top: 18%;
+  margin-top:3%;
+  z-index: 1;
+}
+
+span{
+  color:rgb(255, 255, 255);
+  direction: rtl;
+  font-family: 'Rubik';
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 17px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 2;
+}
+
+
+

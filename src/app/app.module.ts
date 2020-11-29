@@ -22,6 +22,7 @@ import { InputBasicComponent } from './components/elements/input-basic/input-bas
 import { TestServiceComponent } from './test-service/test-service.component';
 import { CookieService } from 'ngx-cookie-service';
 import { CommonModule } from '@angular/common';
+import { GreenButtonComponent } from './components/elements/green-button/green-button.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CommonModule } from '@angular/common';
     HopeWeHelpedComponent,
     InputBasicComponent,
     TestServiceComponent,
+    GreenButtonComponent,
   ],
   imports: [
     BrowserModule,
