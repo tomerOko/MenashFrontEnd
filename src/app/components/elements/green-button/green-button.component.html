@@ -1,4 +1,4 @@
   <img class="google_login" src={{link_to_img}}>
   <span>{{this.title}}</span>
-  <a class="google_login" href={{link_to}}></a>
-
+  <a class="google_login" *ngFor="let item of is_href" href={{link_to}}></a>
+  <a class="google_login" *ngFor="let item of is_router" routerLink={{link_to}}></a>
