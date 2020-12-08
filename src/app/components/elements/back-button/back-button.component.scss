@@ -1,0 +1,20 @@
+@import '../../../sass/mixins.scss';
+
+:host{
+  @include elementHostClass;
+  height:4vh;
+  top:3.8vh;
+  // height:3.45vh;
+  // top:6.65vh;
+}
+
+
+
+img{
+  z-index: 5;
+  max-height: 100%;
+  transform: translateX(-18vh);
+  // transform: translateX(-14.59vh);
+  position: absolute;
+}
+

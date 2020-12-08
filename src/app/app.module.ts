@@ -12,7 +12,6 @@ import { ConnectionProblemComponent } from './components/pages/connection-proble
 import { PostSearchComponent } from './components/pages/post-search/post-search.component';
 import { LogoComponent } from './components/elements/logo/logo.component';
 import { VibeComponent } from './components/elements/vibe/vibe.component';
-import { LoginGoggleComponent } from './components/elements/login-goggle/login-goggle.component';
 import { ActionButtonComponent } from './components/elements/action-button/action-button.component';
 import { ThankUComponent } from './components/pages/thank-u/thank-u.component';
 import { AllLinksComponent } from './components/pages/all-links/all-links.component';
@@ -23,6 +22,10 @@ import { TestServiceComponent } from './test-service/test-service.component';
 import { CookieService } from 'ngx-cookie-service';
 import { CommonModule } from '@angular/common';
 import { GreenButtonComponent } from './components/elements/green-button/green-button.component';
+import { PostCreateComponent } from './components/pages/post-create/post-create.component';
+import { WhatIsUpComponent } from './components/pages/what-is-up/what-is-up.component';
+import { CustomInputComponent } from './components/elements/custom-input/custom-input.component';
+import { BackButtonComponent } from './components/elements/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,6 @@ import { GreenButtonComponent } from './components/elements/green-button/green-b
     PostSearchComponent,
     LogoComponent,
     VibeComponent,
-    LoginGoggleComponent,
     ActionButtonComponent,
     ThankUComponent,
     AllLinksComponent,
@@ -45,6 +47,10 @@ import { GreenButtonComponent } from './components/elements/green-button/green-b
     InputBasicComponent,
     TestServiceComponent,
     GreenButtonComponent,
+    PostCreateComponent,
+    WhatIsUpComponent,
+    CustomInputComponent,
+    BackButtonComponent,
   ],
   imports: [
     BrowserModule,

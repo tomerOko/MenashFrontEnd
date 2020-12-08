@@ -7,17 +7,38 @@
 .big_blue{
   @include big_blue_div;
   top: 55.6vh;
-  font-size: 21px ;
+  font-size: 2.59vh ;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 3.45vh;
 }
 
 .small_green{
   @include small_green_div;
-  top:40vh;
-  line-height: 1.2;
+  top:40.52vh;
+  line-height: 2.46vh;
 }
 
-.top329{
+.vibe_img_div{
   top:33.07vh;
+}
+
+.vibe_img{
+  height: 5.48vh;
+}
+
+app-vibe{
+top:38.85vh!important;
+}
+
+.only{
+  @include stadard_text();
+  @include stadard_div();
+  position: absolute;
+  top:82.14vh;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 2.06vh;
+  line-height:2.59vh ;
+  color:#B26868;
 }

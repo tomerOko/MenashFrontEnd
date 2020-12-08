@@ -14,15 +14,18 @@ export class AllLinksComponent implements OnInit {
 
   ngOnInit() {
     this.routerLinks=[
-      {address:"/", text:"welcome"},
-      {address:"/main", text:"shoping list"},
-      {address:"/bedConnection", text:"bedConnection"},
-      {address:"/wrongMail", text:"wrongMail"},
-      {address:"/thankU", text:"thankU"},
-      {address:"/home", text:"home" },
-      {address:"/postSearch", text:"postSearch"},
-      {address:"/hopeWeHelped", text: "hopeWeHelped"},
-      {address:"/test_service", text: "test_service"}
+      {address:"/", text:" - WelcomeComponent"},
+      {address:"/bed_connection", text:"bed_connection - ConnectionProblemComponent"},
+      {address:"/wrong_mail", text:"wrong_mail - MailProblemComponent"},
+      {address:"/router", text:"router - AllLinksComponent"},
+      {address:"/thank_u", text:"thank_u - ThankUComponent"},
+      {address:"/home", text:"home - HomeComponent"},
+      {address:"/post_search", text:"post_search - PostSearchComponent"},
+      {address:"/hope_we_helped", text:"hope_we_helped - HopeWeHelpedComponent"},
+      {address:"/test_service", text:"test_service - TestServiceComponent"},
+      {address:"/give", text:"give - PostCreateComponent"},
+      {address:"/main", text:"main - TodoListComponent"},
+      {address:"/what_is_up", text:"what_is_up - WhatIsUpComponent"}
     ]
    }
 }

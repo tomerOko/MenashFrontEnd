@@ -1,0 +1,33 @@
+@import '../../../sass/mixins.scss';
+
+:host{
+  @include pageHostClass;
+}
+
+.big_blue{
+  @include blue_text;
+  @include stadard_div;
+  position: relative;
+  font-size: 2.3vh;
+  line-height: 2.9vh;
+  font-weight: 600;
+}
+
+.small_green{
+  @include small_green_div;
+}
+
+.vertical_center{
+  @include pageHostClass;
+  grid-template-columns: 1fr;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.accessori{
+  height: 4.07vh;
+}
+
