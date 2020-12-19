@@ -5,7 +5,6 @@ import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TestComponent } from './components/test/test.component';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 import { MailProblemComponent } from './components/pages/mail-problem/mail-problem.component';
 import { ConnectionProblemComponent } from './components/pages/connection-problem/connection-problem.component';
@@ -18,7 +17,6 @@ import { AllLinksComponent } from './components/pages/all-links/all-links.compon
 import { HomeComponent } from './components/pages/home/home.component';
 import { HopeWeHelpedComponent } from './components/pages/hope-we-helped/hope-we-helped.component';
 import { InputBasicComponent } from './components/elements/input-basic/input-basic.component';
-import { TestServiceComponent } from './test-service/test-service.component';
 import { CookieService } from 'ngx-cookie-service';
 import { CommonModule } from '@angular/common';
 import { GreenButtonComponent } from './components/elements/green-button/green-button.component';
@@ -26,13 +24,14 @@ import { PostCreateComponent } from './components/pages/post-create/post-create.
 import { WhatIsUpComponent } from './components/pages/what-is-up/what-is-up.component';
 import { CustomInputComponent } from './components/elements/custom-input/custom-input.component';
 import { BackButtonComponent } from './components/elements/back-button/back-button.component';
+import { MainService } from './services/main_service/main.service';
+import { TestInputComponent } from './components/pages/test-input/test-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     TodoListComponent,
-    TestComponent,
     WelcomeComponent,
     MailProblemComponent,
     ConnectionProblemComponent,
@@ -45,12 +44,12 @@ import { BackButtonComponent } from './components/elements/back-button/back-butt
     HomeComponent,
     HopeWeHelpedComponent,
     InputBasicComponent,
-    TestServiceComponent,
     GreenButtonComponent,
     PostCreateComponent,
     WhatIsUpComponent,
     CustomInputComponent,
     BackButtonComponent,
+    TestInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +57,7 @@ import { BackButtonComponent } from './components/elements/back-button/back-butt
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [CookieService],
+  providers: [CookieService, MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

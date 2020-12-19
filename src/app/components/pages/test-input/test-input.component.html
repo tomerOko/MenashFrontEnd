@@ -1,0 +1,7 @@
+<p>test-input works!</p>
+<button>get all streets</button>
+<div style="border: 2px solid gray; display: grid; grid-template-columns: 1fr repeat(6); grid-template-columns: 6vh;">
+  <div *ngFor="let item of get_all_streets_result">
+    {{item.Id}} == {{item.streetName}}
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Post } from '../../modules/Todo';
+import { Post } from '../../models/Todo';
 import { Observable } from 'rxjs';
 
 const httpOptions={

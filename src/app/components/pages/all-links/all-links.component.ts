@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routerLink } from 'src/app/modules/routerLink';
+import { routerLink } from 'src/app/models/routerLink';
 
 @Component({
   selector: 'app-all-links',

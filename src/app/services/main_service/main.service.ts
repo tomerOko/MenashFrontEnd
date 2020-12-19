@@ -1,10 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { apartment_post } from 'src/app/modules/apartment_post';
-import { building_post } from 'src/app/modules/building_post';
-import { Street } from 'src/app/modules/street';
-import { Post } from 'src/app/modules/Todo';
+import {login_status, Street, apartment_post, building_post} from './../../models/main_model'
 
 const httpOptions={
   headers: new HttpHeaders({
@@ -19,8 +17,11 @@ const httpOptions={
 
 export class MainService {
 
-  slags = {
+  private streets;
+
+  private slags = {
     domain: "http://localhost:3000",
+    check:"/ensureAuth",
     get_all_streets: "/getAllStreets",
     create_building: "/createBuilding",
     create_apartment: "/createApartment",
@@ -33,10 +34,32 @@ export class MainService {
     get_my_building_posts: "/getMyBuildingPosts",
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router : Router) {}
 
-  get_all_streets(): Observable < Street[] > {
-    return this.http.post < Street[] > (this.slags.domain + this.slags.get_all_streets, "", httpOptions)
+
+  check(){
+    // this.http.get < login_status > (this.slags.domain + this.slags.check, httpOptions).subscribe(data => {
+    //   console.log(data)
+    //   console.log("loged")
+    //   if(data.authenticated){
+    //     console.log("loged in")
+    //     this.router.navigate([route])
+    //   }
+    // })
+    return this.http.get<login_status>(this.slags.domain + this.slags.check, httpOptions)
+  }
+
+  check_boolean(){
+
+  }
+
+
+  get_all_streets(): Street[] {
+    this.http.post < Street[] > (this.slags.domain + this.slags.get_all_streets, "", httpOptions).subscribe(data => {
+      return data;
+    })
+    return null
+    // return this.http.post < Street[] > (this.slags.domain + this.slags.get_all_streets, "", httpOptions)
   }
 
   create_building(streetId:string, buildingName:string): Observable <any> {

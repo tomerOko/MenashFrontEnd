@@ -12,13 +12,13 @@ import { ThankUComponent } from './components/pages/thank-u/thank-u.component';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 import { WhatIsUpComponent } from './components/pages/what-is-up/what-is-up.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TestServiceComponent } from './test-service/test-service.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
 
 const routes: Routes = [
 
   // ({path:")(\w*)?(", component: )(\w+)(},?)
   // {address:"/$2", text:"$2 - $4"},
-  {path:"", component: WelcomeComponent},
+  {path:"", component: WelcomeComponent, canActivate:[LoggedInGuard]},
   {path:"bed_connection", component: ConnectionProblemComponent},
   {path:"wrong_mail", component:MailProblemComponent},
   {path:"router", component: AllLinksComponent},
@@ -26,7 +26,6 @@ const routes: Routes = [
   {path:"home", component: HomeComponent},
   {path:"post_search", component: PostSearchComponent},
   {path:"hope_we_helped", component: HopeWeHelpedComponent},
-  {path:"test_service", component: TestServiceComponent},
   {path:"give", component: PostCreateComponent},
   {path:"main", component: TodoListComponent},
   {path:"what_is_up", component: WhatIsUpComponent}

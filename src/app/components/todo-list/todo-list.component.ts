@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
-import { Post } from 'src/app/modules/Todo';
+import { Post } from 'src/app/models/Todo';
 import { TodoService } from '../../services/todo_service/todo.service';
 // import {Post} from "../../modules/Todo"
 @Component({
